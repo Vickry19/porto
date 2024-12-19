@@ -217,19 +217,20 @@ span {
 .text-animation span::before {
     content: "Informatics Student";
     color: var(--main-color);
-    animation: words 20s infinite;
+    animation: words 10s infinite;
 }
 
 .text-animation span::after {
     content: "";
     background-color: var(--bg-color);
     position: absolute;
-    width: calc(100% + 8px);
+    width: 100%; /* Sesuaikan panjang teks */
     height: 100%;
     border-left: 3px solid var(--main-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    right: 0;
+    animation: cursor 0.6s infinite, typing 10s steps(21) infinite;
 }
+
 
 @keyframes cursor {
     to {
@@ -238,20 +239,11 @@ span {
 }
 
 @keyframes words {
-
-    0%,
-    35% {
-        content: "Freelance Graphic Designer";
+    0%, 50% {
+        content: "Informatics Student";
     }
-
-    36%,
-    70% {
-        content: "Frontend Developer Aamiin";
-    }
-
-    71%,
-    100% {
-        content: "UI/UX Designer Aamiin";
+    51%, 100% {
+        content: "Frontend Developer";
     }
 }
 
